@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+*{
+  font-family: 'Outfit', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --color-primary: #1770FF; /* Primary color */
+}
