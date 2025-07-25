@@ -24,12 +24,7 @@ const Navbar = () => {
         <h1 className="sm:text-xl lg:text-2xl font-bold text-[#1770FF]">Vistoria</h1>
       </div>
       <div className="flex items-center max-sm:text-sm gap-2 sm:gap-4">
-        <button
-          className="flex justify-center items-center gap-2 border-2 border-primary bg-primary text-white text-sm px-1 sm:px-4 py-1 rounded-full hover:scale-102  transition-all duration-300 cursor-pointer"
-          onClick={() => navigate("/adduserblog")}
-        >
-          <i className="fa-solid fa-plus"></i><span className="hidden sm:inline-block">Add Blog</span>{" "}
-        </button>
+        
         {token ? (
           <>
             <button
