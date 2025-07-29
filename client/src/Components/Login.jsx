@@ -15,10 +15,8 @@ const Login = ({isOpen, setIsOpen}) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-          console.log("hii");
           const {data} = await axios.post('/api/admin/login', {email: user.email, password: user.password});
           if (data.success) {
-            console.log("Login successful:", data.token);
             setToken(data.token);
             localStorage.setItem("token", data.token);
             axios.defaults.headers.common['Authorization'] = `${data.token}`;

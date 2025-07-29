@@ -74,7 +74,7 @@ const Blog = () => {
           className="flex items-center justify-center cursor-pointer gap-2 px-2 sm:px-4 py-2 rounded-lg bg-primary/20 hover:bg-gray-100 transition-all duration-300"
           onClick={() => window.history.back()}
         >
-          <i class="fa-solid fa-arrow-left"></i> <span className="hidden sm:inline-block">Back</span>
+          <i className="fa-solid fa-arrow-left"></i> <span className="hidden sm:inline-block">Back</span>
         </button>
       </div>
       <img

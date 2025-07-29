@@ -10,7 +10,7 @@ await connectDB()
 
 //Middlewares
 app.use(cors({
-  origin: 'https://vistoria-blogging-platform.vercel.app', // adjust as needed
+  origin: ['https://vistoriaofficial.vercel.app', 'http://localhost:5173'], // adjust as needed
   credentials: true
 }));
 app.use(express.json())

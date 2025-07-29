@@ -11,9 +11,7 @@ const MySwal = withReactContent(Swal);
 const Navbar = () => {
   const navigate = useNavigate();
   const { token, setToken, axios } = useAppContext();
-  const [isOpen, setIsOpen] = useState(
-    localStorage.getItem("token") ? false : true
-  );
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="sticky top-0 bg-white flex justify-between items-center py-2 sm:py-5 max-8 px-8 sm:px-16 mx-auto z-5">
       <div

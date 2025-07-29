@@ -11,7 +11,6 @@ const ListBlog = () => {
   const fetchBlogs = async () => {
     try {
       const { data } = await axios.get("/api/admin/blogs");
-      console.log("Blogs fetched:", data);
       data.success
         ? setBlogs(data.blogs)
         : toast.error(data.message || "Failed to fetch blogs");
