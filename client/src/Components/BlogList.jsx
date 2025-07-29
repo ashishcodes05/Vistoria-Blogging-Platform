@@ -13,13 +13,6 @@ const BlogList = () => {
       blog.category.toLowerCase().includes(query.toLowerCase())
     );
   });
-  if(filteredBlogs.length === 0 && query !== "") {
-    return (
-      <div className="flex justify-center items-center h-full">
-        <p className="text-gray-500">No blogs found.</p>
-      </div>
-    );
-  }
   return (
     <div className="container mx-auto">
       <div className="flex justify-center gap-1 sm:gap-4 my-10 relative px-4 sm:px-8 lg:px-12 xl:px-16">
@@ -38,7 +31,7 @@ const BlogList = () => {
         ))}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-8 sm:mx-16 xl:mx-24">
-        {filteredBlogs ? filteredBlogs
+        {filteredBlogs.length != 0 ? filteredBlogs
           .filter((blog) => {
             return (
               category === "All" ||
