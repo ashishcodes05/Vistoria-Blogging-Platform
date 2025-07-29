@@ -31,7 +31,7 @@ const BlogList = () => {
         ))}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mx-8 sm:mx-16 xl:mx-24">
-        {filteredBlogs.length != 0 ? filteredBlogs
+        {filteredBlogs
           .filter((blog) => {
             return (
               category === "All" ||
@@ -47,10 +47,15 @@ const BlogList = () => {
               image={blog.image}
               _id={blog._id}
             />
-          )): (
-            <Loader />
-          )}
+          ))}
       </div>
+      {
+        filteredBlogs.length === 0 && (
+          <div className="flex items-center justify-center h-64 text-gray-500">
+            <Loader />
+          </div>
+        )
+      }
       <p className="my-6 sm:my-8 max-w-2xl m-auto max-sm:text-xs text-center pt-10">
         "From tech deep-dives to life reflections, motivational sparks to
         creative musings, <br />
