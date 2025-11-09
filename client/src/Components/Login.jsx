@@ -48,7 +48,7 @@ const Login = ({isOpen, setIsOpen}) => {
               className="border border-gray-300 p-2 w-full rounded outline-primary focus:border-blue-500"
               type="email"
               id="email"
-              placeholder="Enter your email"
+              placeholder="admin@example.com"
               onChange={(e) =>
                 setUser((prevState) => ({
                   ...prevState,
@@ -69,7 +69,7 @@ const Login = ({isOpen, setIsOpen}) => {
               className="border border-gray-300 p-2 w-full rounded outline-primary focus:border-blue-500"
               type="password"
               id="password"
-              placeholder="Enter your password"
+              placeholder="admin123"
               onChange={(e) =>
                 setUser((prevState) => ({
                   ...prevState,
