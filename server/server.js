@@ -9,10 +9,7 @@ const app = express();
 await connectDB()
 
 //Middlewares
-app.use(cors({
-  origin: ['https://vistoriaofficial.vercel.app', 'http://localhost:5173'], // adjust as needed
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json())
 
 app.get('/', (req, res) => {
